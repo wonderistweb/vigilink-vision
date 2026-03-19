@@ -2,8 +2,9 @@ import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Target, Award, Users } from "lucide-react";
 import BrandEmblem from "@/components/BrandEmblem";
-import teamImage from "@/assets/team-operations.jpg";
+import teamImage from "@/assets/team-facility.png";
 import facilityImage from "@/assets/facility-exterior.jpg";
+import foundersImage from "@/assets/founders-ops-center.png";
 
 const values = [
   { icon: Shield, title: "Integrity", description: "Every action we take upholds the highest ethical and professional standards." },
@@ -116,7 +117,7 @@ const About = () => {
               </div>
             </div>
             <div>
-              <img src={facilityImage} alt="Secured facility" className="w-full rounded-sm border border-border" />
+              <img src={foundersImage} alt="Vigillink co-founders Paul Kudela and Jason Haug in operations center" className="w-full rounded-sm border border-border" />
             </div>
           </div>
         </div>

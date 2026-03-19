@@ -4,6 +4,8 @@ import { Shield, CheckCircle, ArrowRight } from "lucide-react";
 import BrandEmblem from "@/components/BrandEmblem";
 import teamBriefingImage from "@/assets/team-briefing.jpg";
 import accessControlImage from "@/assets/access-control.jpg";
+import paulPresentingImage from "@/assets/paul-presenting.png";
+import teamFacilityImage from "@/assets/team-facility.png";
 
 const benefits = [
   "Competitive compensation with performance bonuses",
@@ -61,6 +63,22 @@ const Careers = () => {
         </div>
       </section>
 
+
+      {/* Team Image Strip */}
+      <section className="py-16 bg-card border-b border-border">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative rounded-sm overflow-hidden border border-border">
+              <img src={teamFacilityImage} alt="Vigillink team members with security officers at data center facility" className="w-full h-64 object-cover" />
+              <div className="absolute inset-0 rounded-sm border border-primary/20" />
+            </div>
+            <div className="relative rounded-sm overflow-hidden border border-border">
+              <img src={paulPresentingImage} alt="Vigillink co-founder presenting AI data center security protocols" className="w-full h-64 object-cover" />
+              <div className="absolute inset-0 rounded-sm border border-primary/20" />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Benefits & Requirements */}
       <section className="py-24 bg-card border-b border-border relative overflow-hidden">

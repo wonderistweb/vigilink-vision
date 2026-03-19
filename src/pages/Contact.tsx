@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import { ArrowRight, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
 import BrandEmblem from "@/components/BrandEmblem";
 import datacenterExteriorImage from "@/assets/datacenter-exterior.jpg";
+import clientHandshakeImage from "@/assets/client-handshake.png";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", message: "" });
@@ -75,6 +76,10 @@ const Contact = () => {
                     <p className="text-muted-foreground text-sm">National Operations — United States</p>
                   </div>
                 </div>
+              </div>
+
+              <div className="rounded-sm overflow-hidden border border-border">
+                <img src={clientHandshakeImage} alt="Vigillink finalizing security contract with client at data center facility" className="w-full h-48 object-cover" />
               </div>
 
               <div className="p-6 border border-border rounded-sm bg-background relative overflow-hidden">

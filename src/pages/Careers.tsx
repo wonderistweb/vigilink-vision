@@ -4,6 +4,8 @@ import { Shield, CheckCircle, ArrowRight } from "lucide-react";
 import BrandEmblem from "@/components/BrandEmblem";
 import teamBriefingImage from "@/assets/team-briefing.jpg";
 import accessControlImage from "@/assets/access-control.jpg";
+import paulPresentingImage from "@/assets/paul-presenting.png";
+import teamFacilityImage from "@/assets/team-facility.png";
 
 const benefits = [
   "Competitive compensation with performance bonuses",

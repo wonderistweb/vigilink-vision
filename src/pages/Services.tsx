@@ -14,6 +14,7 @@ const services = [
     icon: Server,
     title: "AI Data Center Security",
     tag: "DATA CENTER ELITE",
+    image: datacenterCorridorImage,
     description: "Purpose-built security programs for AI and cloud computing facilities. Our specialists understand the unique threat profile of data centers—from insider threats to physical perimeter defense.",
     features: [
       "Armed perimeter and interior patrol",
@@ -27,6 +28,7 @@ const services = [
     icon: Users,
     title: "Executive Protection",
     tag: "CLOSE PROTECTION",
+    image: teamBriefingImage,
     description: "Discreet, professional close protection for C-suite executives, visiting dignitaries, and high-profile personnel operating in or around sensitive facilities.",
     features: [
       "Advance threat assessment & route planning",
@@ -40,6 +42,7 @@ const services = [
     icon: Shield,
     title: "Critical Infrastructure Protection",
     tag: "INFRASTRUCTURE",
+    image: infrastructureImage,
     description: "Comprehensive physical security for energy facilities, telecommunications hubs, water treatment plants, and other essential infrastructure that demands zero-failure protection.",
     features: [
       "Perimeter defense & intrusion response",
@@ -53,6 +56,7 @@ const services = [
     icon: Eye,
     title: "Surveillance & Monitoring",
     tag: "SURVEILLANCE",
+    image: operationsCenterImage,
     description: "Advanced surveillance system oversight integrated with rapid physical response teams, ensuring threats are detected and neutralized before they escalate.",
     features: [
       "CCTV & sensor monitoring",
@@ -66,6 +70,7 @@ const services = [
     icon: Building,
     title: "Property & Building Security",
     tag: "PROPERTY",
+    image: accessControlImage,
     description: "Professional armed security for commercial properties, corporate campuses, industrial sites, and high-value real estate portfolios.",
     features: [
       "Lobby & access point staffing",
@@ -79,6 +84,7 @@ const services = [
     icon: Calendar,
     title: "Event Security",
     tag: "EVENTS",
+    image: datacenterExteriorImage,
     description: "Scalable security solutions for corporate events, product launches, shareholder meetings, and large-scale public gatherings.",
     features: [
       "Crowd management & flow control",

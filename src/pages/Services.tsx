@@ -119,36 +119,43 @@ const Services = () => {
 
       {/* Services */}
       <section className="py-24">
-        <div className="container mx-auto px-4 space-y-20">
+        <div className="container mx-auto px-4 space-y-28">
           {services.map((service, index) => (
-            <div
-              key={service.title}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${
-                index % 2 === 1 ? "lg:direction-rtl" : ""
-              }`}
-            >
-              <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <div className="flex items-center gap-2 mb-4">
+            <div key={service.title} className="space-y-8">
+              {/* Image */}
+              <div className="relative rounded-sm overflow-hidden border border-border">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 flex items-center gap-2">
                   <div className="h-px w-8 bg-primary" />
                   <span className="text-primary text-xs font-display font-medium tracking-[0.2em]">{service.tag}</span>
                 </div>
-                <div className="flex items-center gap-3 mb-4">
-                  <service.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
-                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">{service.title}</h2>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-6">{service.description}</p>
               </div>
 
-              <div className={`bg-card border border-border rounded-sm p-8 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                <h3 className="font-display font-semibold text-foreground mb-4 text-sm tracking-wider">KEY CAPABILITIES</h3>
-                <ul className="space-y-3">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start`}>
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <service.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
+                    <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">{service.title}</h2>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                </div>
+
+                <div className="bg-card border border-border rounded-sm p-8">
+                  <h3 className="font-display font-semibold text-foreground mb-4 text-sm tracking-wider">KEY CAPABILITIES</h3>
+                  <ul className="space-y-3">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           ))}

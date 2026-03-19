@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Target, Award, Users } from "lucide-react";
+import BrandEmblem from "@/components/BrandEmblem";
 import teamImage from "@/assets/team-operations.jpg";
 import facilityImage from "@/assets/facility-exterior.jpg";
 

@@ -2,8 +2,8 @@ import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Shield, CheckCircle, ArrowRight } from "lucide-react";
 import BrandEmblem from "@/components/BrandEmblem";
+import { RevealSection } from "@/hooks/useScrollReveal";
 import teamBriefingImage from "@/assets/team-briefing.jpg";
-import accessControlImage from "@/assets/access-control.jpg";
 import paulPresenting2Image from "@/assets/paul-presenting-2.png";
 
 const benefits = [
@@ -46,7 +46,7 @@ const Careers = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl fade-in-up">
             <div className="flex items-center gap-2 mb-6">
               <div className="h-px w-12 bg-primary" />
               <span className="text-primary text-sm font-display font-medium tracking-[0.2em]">CAREERS</span>
@@ -62,13 +62,12 @@ const Careers = () => {
         </div>
       </section>
 
-
       {/* Benefits & Requirements */}
       <section className="py-24 bg-card border-b border-border relative overflow-hidden">
         <BrandEmblem className="absolute right-[-8%] bottom-[-15%] w-[500px] h-[500px] md:w-[650px] md:h-[650px] text-white opacity-[0.02] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <RevealSection>
               <h2 className="text-2xl font-display font-bold text-foreground mb-6">What We Offer</h2>
               <ul className="space-y-3 mb-10">
                 {benefits.map((b) => (
@@ -87,18 +86,20 @@ const Careers = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="relative">
-              <img src={paulPresenting2Image} alt="Vigillink leadership presenting AI data center security protocols" className="w-full rounded-sm border border-border" />
-              <div className="absolute inset-0 rounded-sm border border-primary/20" />
-            </div>
+            </RevealSection>
+            <RevealSection delay={0.2}>
+              <div className="relative">
+                <img src={paulPresenting2Image} alt="Vigillink leadership presenting AI data center security protocols" className="w-full rounded-sm border border-border" />
+                <div className="absolute inset-0 rounded-sm border border-primary/20" />
+              </div>
+            </RevealSection>
           </div>
         </div>
       </section>
 
       {/* Application Form */}
       <section className="py-24 digital-texture overflow-hidden relative">
-        <div className="container mx-auto px-4 max-w-2xl relative z-10">
+        <RevealSection className="container mx-auto px-4 max-w-2xl relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display font-bold text-foreground mb-4">Apply Now</h2>
             <p className="text-muted-foreground">
@@ -117,55 +118,27 @@ const Careers = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-display font-medium text-foreground mb-2">First Name *</label>
-                  <input
-                    required
-                    type="text"
-                    value={form.firstName}
-                    onChange={(e) => setForm({ ...form, firstName: e.target.value })}
-                    className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors"
-                  />
+                  <input required type="text" value={form.firstName} onChange={(e) => setForm({ ...form, firstName: e.target.value })} className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors" />
                 </div>
                 <div>
                   <label className="block text-sm font-display font-medium text-foreground mb-2">Last Name *</label>
-                  <input
-                    required
-                    type="text"
-                    value={form.lastName}
-                    onChange={(e) => setForm({ ...form, lastName: e.target.value })}
-                    className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors"
-                  />
+                  <input required type="text" value={form.lastName} onChange={(e) => setForm({ ...form, lastName: e.target.value })} className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors" />
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-display font-medium text-foreground mb-2">Email *</label>
-                  <input
-                    required
-                    type="email"
-                    value={form.email}
-                    onChange={(e) => setForm({ ...form, email: e.target.value })}
-                    className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors"
-                  />
+                  <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors" />
                 </div>
                 <div>
                   <label className="block text-sm font-display font-medium text-foreground mb-2">Phone *</label>
-                  <input
-                    required
-                    type="tel"
-                    value={form.phone}
-                    onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                    className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors"
-                  />
+                  <input required type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors" />
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-display font-medium text-foreground mb-2">Years of Experience</label>
-                  <select
-                    value={form.experience}
-                    onChange={(e) => setForm({ ...form, experience: e.target.value })}
-                    className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors"
-                  >
+                  <select value={form.experience} onChange={(e) => setForm({ ...form, experience: e.target.value })} className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors">
                     <option value="">Select...</option>
                     <option value="0-2">0–2 years</option>
                     <option value="3-5">3–5 years</option>
@@ -175,11 +148,7 @@ const Careers = () => {
                 </div>
                 <div>
                   <label className="block text-sm font-display font-medium text-foreground mb-2">Position of Interest</label>
-                  <select
-                    value={form.position}
-                    onChange={(e) => setForm({ ...form, position: e.target.value })}
-                    className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors"
-                  >
+                  <select value={form.position} onChange={(e) => setForm({ ...form, position: e.target.value })} className="w-full h-11 px-4 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors">
                     <option value="">Select...</option>
                     <option value="armed-specialist">Armed Security Specialist</option>
                     <option value="data-center">Data Center Security Officer</option>
@@ -191,23 +160,14 @@ const Careers = () => {
               </div>
               <div>
                 <label className="block text-sm font-display font-medium text-foreground mb-2">Tell Us About Yourself</label>
-                <textarea
-                  rows={5}
-                  value={form.message}
-                  onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full px-4 py-3 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors resize-none"
-                  placeholder="Describe your background, certifications, and why you're interested in Vigillink..."
-                />
+                <textarea rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="w-full px-4 py-3 bg-card border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors resize-none" placeholder="Describe your background, certifications, and why you're interested in Vigillink..." />
               </div>
-              <button
-                type="submit"
-                className="w-full h-12 flex items-center justify-center gap-2 rounded-sm bg-primary text-primary-foreground font-display font-semibold tracking-wide hover:bg-primary/90 transition-colors"
-              >
+              <button type="submit" className="w-full h-12 flex items-center justify-center gap-2 rounded-sm bg-primary text-primary-foreground font-display font-semibold tracking-wide hover:bg-primary/90 transition-colors">
                 SUBMIT APPLICATION <ArrowRight size={16} />
               </button>
             </form>
           )}
-        </div>
+        </RevealSection>
       </section>
     </Layout>
   );

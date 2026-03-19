@@ -68,6 +68,7 @@ const About = () => {
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
+            <BrandEmblem className="w-12 h-12 text-primary/30 mx-auto mb-4" />
             <div className="flex items-center gap-2 justify-center mb-4">
               <div className="h-px w-12 bg-primary" />
               <span className="text-primary text-sm font-display font-medium tracking-[0.2em]">OUR VALUES</span>

@@ -40,8 +40,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Info + Form */}
-      <section className="py-24 bg-card border-y border-border">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-card border-y border-border relative overflow-hidden">
+        <BrandEmblem className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] text-primary/[0.03] pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Info */}
             <div className="space-y-8">
@@ -77,7 +78,6 @@ const Contact = () => {
               </div>
 
               <div className="p-6 border border-border rounded-sm bg-background relative overflow-hidden">
-                <BrandEmblem className="absolute -right-4 -bottom-4 w-24 h-24 text-primary/10" />
                 <h3 className="font-display font-semibold text-foreground text-sm mb-2 relative z-10">RESPONSE TIME</h3>
                 <p className="text-muted-foreground text-sm">
                   All inquiries receive a response within 24 hours. For urgent security needs, call our operations line directly.

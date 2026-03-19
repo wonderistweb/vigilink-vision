@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import BrandEmblem from "@/components/BrandEmblem";
 import { Shield, Server, Users, Eye, ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-datacenter.jpg";
-import specialistImage from "@/assets/security-specialist.jpg";
+import clientHandshake2Image from "@/assets/client-handshake-2.png";
 import operationsCenterImage from "@/assets/operations-center.jpg";
 import conferenceImage from "@/assets/conference-presentation.png";
 import datacenterCorridorImage from "@/assets/datacenter-corridor.jpg";

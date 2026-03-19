@@ -2,6 +2,7 @@ import { useState } from "react";
 import Layout from "@/components/Layout";
 import { ArrowRight, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
 import BrandEmblem from "@/components/BrandEmblem";
+import { RevealSection } from "@/hooks/useScrollReveal";
 import datacenterExteriorImage from "@/assets/datacenter-exterior.jpg";
 import clientHandshakeImage from "@/assets/client-handshake.png";
 
@@ -24,7 +25,7 @@ const Contact = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl fade-in-up">
             <div className="flex items-center gap-2 mb-6">
               <div className="h-px w-12 bg-primary" />
               <span className="text-primary text-sm font-display font-medium tracking-[0.2em]">CONTACT</span>
@@ -46,7 +47,7 @@ const Contact = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Info */}
-            <div className="space-y-8">
+            <RevealSection className="space-y-8">
               <div>
                 <h2 className="text-2xl font-display font-bold text-foreground mb-6">Get In Touch</h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -88,10 +89,10 @@ const Contact = () => {
                   All inquiries receive a response within 24 hours. For urgent security needs, call our operations line directly.
                 </p>
               </div>
-            </div>
+            </RevealSection>
 
             {/* Form */}
-            <div className="lg:col-span-2">
+            <RevealSection delay={0.2} className="lg:col-span-2">
               {submitted ? (
                 <div className="text-center py-20 bg-background border border-border rounded-sm">
                   <CheckCircle className="w-16 h-16 text-primary mx-auto mb-4" />
@@ -103,65 +104,33 @@ const Contact = () => {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-display font-medium text-foreground mb-2">Full Name *</label>
-                      <input
-                        required
-                        type="text"
-                        value={form.name}
-                        onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full h-11 px-4 bg-background border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors"
-                      />
+                      <input required type="text" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} className="w-full h-11 px-4 bg-background border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors" />
                     </div>
                     <div>
                       <label className="block text-sm font-display font-medium text-foreground mb-2">Company</label>
-                      <input
-                        type="text"
-                        value={form.company}
-                        onChange={(e) => setForm({ ...form, company: e.target.value })}
-                        className="w-full h-11 px-4 bg-background border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors"
-                      />
+                      <input type="text" value={form.company} onChange={(e) => setForm({ ...form, company: e.target.value })} className="w-full h-11 px-4 bg-background border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors" />
                     </div>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-sm font-display font-medium text-foreground mb-2">Email *</label>
-                      <input
-                        required
-                        type="email"
-                        value={form.email}
-                        onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full h-11 px-4 bg-background border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors"
-                      />
+                      <input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full h-11 px-4 bg-background border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors" />
                     </div>
                     <div>
                       <label className="block text-sm font-display font-medium text-foreground mb-2">Phone</label>
-                      <input
-                        type="tel"
-                        value={form.phone}
-                        onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full h-11 px-4 bg-background border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors"
-                      />
+                      <input type="tel" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} className="w-full h-11 px-4 bg-background border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors" />
                     </div>
                   </div>
                   <div>
                     <label className="block text-sm font-display font-medium text-foreground mb-2">Message *</label>
-                    <textarea
-                      required
-                      rows={6}
-                      value={form.message}
-                      onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full px-4 py-3 bg-background border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors resize-none"
-                      placeholder="Tell us about your facility and security requirements..."
-                    />
+                    <textarea required rows={6} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="w-full px-4 py-3 bg-background border border-border rounded-sm text-foreground text-sm focus:border-primary focus:outline-none transition-colors resize-none" placeholder="Tell us about your facility and security requirements..." />
                   </div>
-                  <button
-                    type="submit"
-                    className="w-full h-12 flex items-center justify-center gap-2 rounded-sm bg-primary text-primary-foreground font-display font-semibold tracking-wide hover:bg-primary/90 transition-colors"
-                  >
+                  <button type="submit" className="w-full h-12 flex items-center justify-center gap-2 rounded-sm bg-primary text-primary-foreground font-display font-semibold tracking-wide hover:bg-primary/90 transition-colors">
                     SEND MESSAGE <ArrowRight size={16} />
                   </button>
                 </form>
               )}
-            </div>
+            </RevealSection>
           </div>
         </div>
       </section>

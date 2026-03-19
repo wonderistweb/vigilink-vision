@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Target, Award, Users } from "lucide-react";
 import BrandEmblem from "@/components/BrandEmblem";
+import { RevealSection } from "@/hooks/useScrollReveal";
 import teamImage from "@/assets/team-facility.png";
 import facilityImage from "@/assets/facility-exterior.jpg";
 import foundersImage from "@/assets/founders-ops-center.png";
@@ -24,7 +25,7 @@ const About = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/60" />
         </div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl fade-in-up">
             <div className="flex items-center gap-2 mb-6">
               <div className="h-px w-12 bg-primary" />
               <span className="text-primary text-sm font-display font-medium tracking-[0.2em]">ABOUT VIGILLINK</span>
@@ -44,10 +45,12 @@ const About = () => {
       <section className="py-24 bg-card border-y border-border">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <img src={teamImage} alt="Vigillink operations team" className="w-full rounded-sm border border-border" />
-            </div>
-            <div>
+            <RevealSection>
+              <div className="relative">
+                <img src={teamImage} alt="Vigillink operations team" className="w-full rounded-sm border border-border" />
+              </div>
+            </RevealSection>
+            <RevealSection delay={0.2}>
               <h2 className="text-3xl font-display font-bold text-foreground mb-6">Our Story</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
@@ -60,7 +63,7 @@ const About = () => {
                   As the AI data center industry exploded nationally, clients began seeking specialized physical security for their most sensitive computing facilities. Vigillink was born—a rebrand and strategic evolution positioning the firm as the premier provider of armed security for critical digital infrastructure nationwide.
                 </p>
               </div>
-            </div>
+            </RevealSection>
           </div>
         </div>
       </section>
@@ -69,24 +72,28 @@ const About = () => {
       <section className="py-24 relative overflow-hidden">
         <BrandEmblem className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] text-white opacity-[0.02] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <div className="flex items-center gap-2 justify-center mb-4">
-              <div className="h-px w-12 bg-primary" />
-              <span className="text-primary text-sm font-display font-medium tracking-[0.2em]">OUR VALUES</span>
-              <div className="h-px w-12 bg-primary" />
+          <RevealSection>
+            <div className="text-center mb-16">
+              <div className="flex items-center gap-2 justify-center mb-4">
+                <div className="h-px w-12 bg-primary" />
+                <span className="text-primary text-sm font-display font-medium tracking-[0.2em]">OUR VALUES</span>
+                <div className="h-px w-12 bg-primary" />
+              </div>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
+                The Principles That Drive Us
+              </h2>
             </div>
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
-              The Principles That Drive Us
-            </h2>
-          </div>
+          </RevealSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v) => (
-              <div key={v.title} className="p-6 bg-card border border-border rounded-sm text-center">
-                <v.icon className="w-10 h-10 text-primary mx-auto mb-4" strokeWidth={1.5} />
-                <h3 className="font-display font-semibold text-foreground mb-2">{v.title}</h3>
-                <p className="text-sm text-muted-foreground">{v.description}</p>
-              </div>
+            {values.map((v, i) => (
+              <RevealSection key={v.title} delay={i * 0.1}>
+                <div className="p-6 bg-card border border-border rounded-sm text-center h-full">
+                  <v.icon className="w-10 h-10 text-primary mx-auto mb-4" strokeWidth={1.5} />
+                  <h3 className="font-display font-semibold text-foreground mb-2">{v.title}</h3>
+                  <p className="text-sm text-muted-foreground">{v.description}</p>
+                </div>
+              </RevealSection>
             ))}
           </div>
         </div>
@@ -96,7 +103,7 @@ const About = () => {
       <section className="py-24 bg-card border-y border-border digital-texture overflow-hidden relative">
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <RevealSection>
               <div className="flex items-center gap-2 mb-4">
                 <div className="h-px w-12 bg-primary" />
                 <span className="text-primary text-sm font-display font-medium tracking-[0.2em]">LEADERSHIP</span>
@@ -115,17 +122,17 @@ const About = () => {
                   <p className="text-sm text-muted-foreground">Operations specialist with deep expertise in security logistics, personnel management, and business operations.</p>
                 </div>
               </div>
-            </div>
-            <div>
+            </RevealSection>
+            <RevealSection delay={0.2}>
               <img src={foundersImage} alt="Vigillink co-founders Paul Kudela and Jason Haug in operations center" className="w-full rounded-sm border border-border" />
-            </div>
+            </RevealSection>
           </div>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-24 text-center">
-        <div className="container mx-auto px-4">
+        <RevealSection className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             Ready to Work With the Best?
           </h2>
@@ -138,7 +145,7 @@ const About = () => {
           >
             GET IN TOUCH <ArrowRight size={16} />
           </Link>
-        </div>
+        </RevealSection>
       </section>
     </Layout>
   );

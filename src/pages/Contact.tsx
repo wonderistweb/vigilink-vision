@@ -41,7 +41,7 @@ const Contact = () => {
 
       {/* Contact Info + Form */}
       <section className="py-24 bg-card border-y border-border relative overflow-hidden">
-        <BrandEmblem className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] text-primary/[0.03] pointer-events-none" />
+        <BrandEmblem className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] text-white opacity-[0.02] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
             {/* Info */}

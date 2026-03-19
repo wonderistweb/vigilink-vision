@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Shield, CheckCircle, ArrowRight } from "lucide-react";
+import teamBriefingImage from "@/assets/team-briefing.jpg";
+import accessControlImage from "@/assets/access-control.jpg";
 
 const benefits = [
   "Competitive compensation with performance bonuses",

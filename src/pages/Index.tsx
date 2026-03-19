@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import BrandEmblem from "@/components/BrandEmblem";
 import { Shield, Server, Users, Eye, ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-datacenter.jpg";
-import specialistImage from "@/assets/security-specialist.jpg";
+import clientHandshake2Image from "@/assets/client-handshake-2.png";
 import operationsCenterImage from "@/assets/operations-center.jpg";
 import conferenceImage from "@/assets/conference-presentation.png";
 import datacenterCorridorImage from "@/assets/datacenter-corridor.jpg";
@@ -181,8 +181,8 @@ const Index = () => {
             </div>
             <div className="relative">
               <img
-                src={specialistImage}
-                alt="Vigillink Security Specialist"
+                src={clientHandshake2Image}
+                alt="Vigillink securing new data center security contract"
                 className="w-full rounded-sm border border-border"
               />
               <div className="absolute inset-0 rounded-sm border border-primary/20" />

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import NeuralNetwork from "@/components/NeuralNetwork";
 import Layout from "@/components/Layout";
 import BrandEmblem from "@/components/BrandEmblem";
 import { Shield, Server, Users, Eye, ArrowRight, CheckCircle, Quote } from "lucide-react";
@@ -64,8 +65,10 @@ const Index = () => {
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImage} alt="AI Data Center Infrastructure" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-background/60" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/80 via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-background/70" />
+          <NeuralNetwork className="opacity-40" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/50 to-transparent" />
+          <div className="absolute inset-0 grid-overlay opacity-20" />
         </div>
 
         <div className="container mx-auto px-4 relative z-10">

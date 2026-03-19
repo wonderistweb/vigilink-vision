@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { Server, Shield, Users, Eye, Building, Calendar, ArrowRight, CheckCircle } from "lucide-react";
+import BrandEmblem from "@/components/BrandEmblem";
 import serverImage from "@/assets/server-detail.jpg";
 import datacenterCorridorImage from "@/assets/datacenter-corridor.jpg";
 import accessControlImage from "@/assets/access-control.jpg";

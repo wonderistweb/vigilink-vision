@@ -64,6 +64,22 @@ const Careers = () => {
       </section>
 
 
+      {/* Team Image Strip */}
+      <section className="py-16 bg-card border-b border-border">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative rounded-sm overflow-hidden border border-border">
+              <img src={teamFacilityImage} alt="Vigillink team members with security officers at data center facility" className="w-full h-64 object-cover" />
+              <div className="absolute inset-0 rounded-sm border border-primary/20" />
+            </div>
+            <div className="relative rounded-sm overflow-hidden border border-border">
+              <img src={paulPresentingImage} alt="Vigillink co-founder presenting AI data center security protocols" className="w-full h-64 object-cover" />
+              <div className="absolute inset-0 rounded-sm border border-primary/20" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits & Requirements */}
       <section className="py-24 bg-card border-b border-border relative overflow-hidden">
         <BrandEmblem className="absolute right-[-8%] bottom-[-15%] w-[500px] h-[500px] md:w-[650px] md:h-[650px] text-white opacity-[0.02] pointer-events-none" />

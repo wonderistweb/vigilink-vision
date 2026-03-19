@@ -117,7 +117,7 @@ const About = () => {
               </div>
             </div>
             <div>
-              <img src={facilityImage} alt="Secured facility" className="w-full rounded-sm border border-border" />
+              <img src={foundersImage} alt="Vigillink co-founders Paul Kudela and Jason Haug in operations center" className="w-full rounded-sm border border-border" />
             </div>
           </div>
         </div>

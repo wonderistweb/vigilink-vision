@@ -78,6 +78,10 @@ const Contact = () => {
                 </div>
               </div>
 
+              <div className="rounded-sm overflow-hidden border border-border">
+                <img src={clientHandshakeImage} alt="Vigillink finalizing security contract with client at data center facility" className="w-full h-48 object-cover" />
+              </div>
+
               <div className="p-6 border border-border rounded-sm bg-background relative overflow-hidden">
                 <h3 className="font-display font-semibold text-foreground text-sm mb-2 relative z-10">RESPONSE TIME</h3>
                 <p className="text-muted-foreground text-sm">

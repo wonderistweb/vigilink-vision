@@ -118,4 +118,42 @@
       transform: translateY(0);
     }
   }
+
+  .digital-texture {
+    position: relative;
+  }
+
+  .digital-texture::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        hsl(var(--primary) / 0.015) 0px,
+        transparent 1px,
+        transparent 3px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        hsl(var(--primary) / 0.015) 0px,
+        transparent 1px,
+        transparent 3px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        hsl(var(--primary) / 0.03) 0px,
+        transparent 1px,
+        transparent 24px
+      ),
+      repeating-linear-gradient(
+        90deg,
+        hsl(var(--primary) / 0.03) 0px,
+        transparent 1px,
+        transparent 24px
+      );
+    background-size: 3px 3px, 3px 3px, 24px 24px, 24px 24px;
+    pointer-events: none;
+    z-index: 0;
+  }
 }

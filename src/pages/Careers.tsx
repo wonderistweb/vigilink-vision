@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Shield, CheckCircle, ArrowRight } from "lucide-react";
+import teamBriefingImage from "@/assets/team-briefing.jpg";
+import accessControlImage from "@/assets/access-control.jpg";
 
 const benefits = [
   "Competitive compensation with performance bonuses",
@@ -36,7 +38,11 @@ const Careers = () => {
     <Layout>
       {/* Hero */}
       <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 grid-overlay opacity-10" />
+        <div className="absolute inset-0">
+          <img src={teamBriefingImage} alt="Security team briefing" className="w-full h-full object-cover opacity-30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+          <div className="absolute inset-0 grid-overlay opacity-15" />
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-6">
@@ -54,8 +60,14 @@ const Careers = () => {
         </div>
       </section>
 
+      {/* Image Break */}
+      <section className="relative h-64 md:h-80 overflow-hidden border-y border-border">
+        <img src={accessControlImage} alt="Security access control" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-background/40" />
+      </section>
+
       {/* Benefits & Requirements */}
-      <section className="py-24 bg-card border-y border-border">
+      <section className="py-24 bg-card border-b border-border">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>

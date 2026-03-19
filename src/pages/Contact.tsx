@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { ArrowRight, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
+import datacenterExteriorImage from "@/assets/datacenter-exterior.jpg";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", message: "" });
@@ -15,7 +16,11 @@ const Contact = () => {
     <Layout>
       {/* Hero */}
       <section className="relative py-32 overflow-hidden">
-        <div className="absolute inset-0 grid-overlay opacity-10" />
+        <div className="absolute inset-0">
+          <img src={datacenterExteriorImage} alt="Secured data center facility" className="w-full h-full object-cover opacity-25" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+          <div className="absolute inset-0 grid-overlay opacity-15" />
+        </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-6">

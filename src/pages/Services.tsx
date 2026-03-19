@@ -2,12 +2,19 @@ import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { Server, Shield, Users, Eye, Building, Calendar, ArrowRight, CheckCircle } from "lucide-react";
 import serverImage from "@/assets/server-detail.jpg";
+import datacenterCorridorImage from "@/assets/datacenter-corridor.jpg";
+import accessControlImage from "@/assets/access-control.jpg";
+import operationsCenterImage from "@/assets/operations-center.jpg";
+import datacenterExteriorImage from "@/assets/datacenter-exterior.jpg";
+import infrastructureImage from "@/assets/infrastructure-night.jpg";
+import teamBriefingImage from "@/assets/team-briefing.jpg";
 
 const services = [
   {
     icon: Server,
     title: "AI Data Center Security",
     tag: "DATA CENTER ELITE",
+    image: datacenterCorridorImage,
     description: "Purpose-built security programs for AI and cloud computing facilities. Our specialists understand the unique threat profile of data centers—from insider threats to physical perimeter defense.",
     features: [
       "Armed perimeter and interior patrol",
@@ -21,6 +28,7 @@ const services = [
     icon: Users,
     title: "Executive Protection",
     tag: "CLOSE PROTECTION",
+    image: teamBriefingImage,
     description: "Discreet, professional close protection for C-suite executives, visiting dignitaries, and high-profile personnel operating in or around sensitive facilities.",
     features: [
       "Advance threat assessment & route planning",
@@ -34,6 +42,7 @@ const services = [
     icon: Shield,
     title: "Critical Infrastructure Protection",
     tag: "INFRASTRUCTURE",
+    image: infrastructureImage,
     description: "Comprehensive physical security for energy facilities, telecommunications hubs, water treatment plants, and other essential infrastructure that demands zero-failure protection.",
     features: [
       "Perimeter defense & intrusion response",
@@ -47,6 +56,7 @@ const services = [
     icon: Eye,
     title: "Surveillance & Monitoring",
     tag: "SURVEILLANCE",
+    image: operationsCenterImage,
     description: "Advanced surveillance system oversight integrated with rapid physical response teams, ensuring threats are detected and neutralized before they escalate.",
     features: [
       "CCTV & sensor monitoring",
@@ -60,6 +70,7 @@ const services = [
     icon: Building,
     title: "Property & Building Security",
     tag: "PROPERTY",
+    image: accessControlImage,
     description: "Professional armed security for commercial properties, corporate campuses, industrial sites, and high-value real estate portfolios.",
     features: [
       "Lobby & access point staffing",
@@ -73,6 +84,7 @@ const services = [
     icon: Calendar,
     title: "Event Security",
     tag: "EVENTS",
+    image: datacenterExteriorImage,
     description: "Scalable security solutions for corporate events, product launches, shareholder meetings, and large-scale public gatherings.",
     features: [
       "Crowd management & flow control",
@@ -113,36 +125,43 @@ const Services = () => {
 
       {/* Services */}
       <section className="py-24">
-        <div className="container mx-auto px-4 space-y-20">
+        <div className="container mx-auto px-4 space-y-28">
           {services.map((service, index) => (
-            <div
-              key={service.title}
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${
-                index % 2 === 1 ? "lg:direction-rtl" : ""
-              }`}
-            >
-              <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <div className="flex items-center gap-2 mb-4">
+            <div key={service.title} className="space-y-8">
+              {/* Image */}
+              <div className="relative rounded-sm overflow-hidden border border-border">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-64 md:h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+                <div className="absolute bottom-4 left-4 flex items-center gap-2">
                   <div className="h-px w-8 bg-primary" />
                   <span className="text-primary text-xs font-display font-medium tracking-[0.2em]">{service.tag}</span>
                 </div>
-                <div className="flex items-center gap-3 mb-4">
-                  <service.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
-                  <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">{service.title}</h2>
-                </div>
-                <p className="text-muted-foreground leading-relaxed mb-6">{service.description}</p>
               </div>
 
-              <div className={`bg-card border border-border rounded-sm p-8 ${index % 2 === 1 ? "lg:order-1" : ""}`}>
-                <h3 className="font-display font-semibold text-foreground mb-4 text-sm tracking-wider">KEY CAPABILITIES</h3>
-                <ul className="space-y-3">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-start gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+              <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start`}>
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <service.icon className="w-8 h-8 text-primary" strokeWidth={1.5} />
+                    <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground">{service.title}</h2>
+                  </div>
+                  <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                </div>
+
+                <div className="bg-card border border-border rounded-sm p-8">
+                  <h3 className="font-display font-semibold text-foreground mb-4 text-sm tracking-wider">KEY CAPABILITIES</h3>
+                  <ul className="space-y-3">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                        <span className="text-sm text-muted-foreground">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           ))}

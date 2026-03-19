@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
+import BrandEmblem from "@/components/BrandEmblem";
 import { Shield, Server, Users, Eye, ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-datacenter.jpg";
 import specialistImage from "@/assets/security-specialist.jpg";
@@ -200,13 +201,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA with Brand Emblem */}
       <section className="py-24 relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={datacenterCorridorImage} alt="Data center infrastructure" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
+          <BrandEmblem className="w-16 h-16 text-primary/20 mx-auto mb-6" />
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">
             Ready to Secure Your Infrastructure?
           </h2>

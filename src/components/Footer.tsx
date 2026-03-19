@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/vigillink-logo.svg";
 
 const Footer = () => {
   return (
@@ -6,13 +7,8 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 border-2 border-primary rounded-sm flex items-center justify-center">
-                <span className="text-primary font-display font-bold text-sm">V</span>
-              </div>
-              <span className="font-display font-bold text-lg tracking-wide text-foreground">
-                VIGIL<span className="text-primary">LINK</span>
-              </span>
+            <Link to="/" className="inline-block mb-4">
+              <img src={logo} alt="Vigillink Security Group" className="h-8" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Elite physical security for mission-critical infrastructure. Protecting the hardware that powers the future.

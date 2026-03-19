@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Shield, CheckCircle, ArrowRight } from "lucide-react";
+import BrandEmblem from "@/components/BrandEmblem";
 import teamBriefingImage from "@/assets/team-briefing.jpg";
 import accessControlImage from "@/assets/access-control.jpg";
 
@@ -64,6 +65,7 @@ const Careers = () => {
       {/* Benefits & Requirements */}
       <section className="py-24 bg-card border-b border-border">
         <div className="container mx-auto px-4">
+          <BrandEmblem className="w-12 h-12 text-primary/20 mb-8" />
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>
               <h2 className="text-2xl font-display font-bold text-foreground mb-6">What We Offer</h2>

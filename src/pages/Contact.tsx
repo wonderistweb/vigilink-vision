@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { ArrowRight, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
+import BrandEmblem from "@/components/BrandEmblem";
 import datacenterExteriorImage from "@/assets/datacenter-exterior.jpg";
 
 const Contact = () => {
@@ -75,8 +76,9 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="p-6 border border-border rounded-sm bg-background">
-                <h3 className="font-display font-semibold text-foreground text-sm mb-2">RESPONSE TIME</h3>
+              <div className="p-6 border border-border rounded-sm bg-background relative overflow-hidden">
+                <BrandEmblem className="absolute -right-4 -bottom-4 w-24 h-24 text-primary/10" />
+                <h3 className="font-display font-semibold text-foreground text-sm mb-2 relative z-10">RESPONSE TIME</h3>
                 <p className="text-muted-foreground text-sm">
                   All inquiries receive a response within 24 hours. For urgent security needs, call our operations line directly.
                 </p>

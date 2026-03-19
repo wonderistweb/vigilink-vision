@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { ArrowRight, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
+import BrandEmblem from "@/components/BrandEmblem";
 import datacenterExteriorImage from "@/assets/datacenter-exterior.jpg";
 
 const Contact = () => {

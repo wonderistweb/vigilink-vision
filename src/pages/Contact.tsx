@@ -3,6 +3,7 @@ import Layout from "@/components/Layout";
 import { ArrowRight, CheckCircle, Mail, Phone, MapPin } from "lucide-react";
 import BrandEmblem from "@/components/BrandEmblem";
 import datacenterExteriorImage from "@/assets/datacenter-exterior.jpg";
+import clientHandshakeImage from "@/assets/client-handshake.png";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", company: "", message: "" });

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import NeuralNetwork from "@/components/NeuralNetwork";
 import Layout from "@/components/Layout";
 import BrandEmblem from "@/components/BrandEmblem";
 import { Shield, Server, Users, Eye, ArrowRight, CheckCircle, Quote } from "lucide-react";

@@ -181,8 +181,8 @@ const Index = () => {
             </div>
             <div className="relative">
               <img
-                src={specialistImage}
-                alt="Vigillink Security Specialist"
+                src={clientHandshake2Image}
+                alt="Vigillink securing new data center security contract"
                 className="w-full rounded-sm border border-border"
               />
               <div className="absolute inset-0 rounded-sm border border-primary/20" />

@@ -3,6 +3,8 @@ import Layout from "@/components/Layout";
 import { Shield, Server, Users, Eye, ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-datacenter.jpg";
 import specialistImage from "@/assets/security-specialist.jpg";
+import operationsCenterImage from "@/assets/operations-center.jpg";
+import datacenterCorridorImage from "@/assets/datacenter-corridor.jpg";
 
 const stats = [
   { value: "15+", label: "Years of Experience" },

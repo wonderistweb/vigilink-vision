@@ -2,6 +2,12 @@ import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { Server, Shield, Users, Eye, Building, Calendar, ArrowRight, CheckCircle } from "lucide-react";
 import serverImage from "@/assets/server-detail.jpg";
+import datacenterCorridorImage from "@/assets/datacenter-corridor.jpg";
+import accessControlImage from "@/assets/access-control.jpg";
+import operationsCenterImage from "@/assets/operations-center.jpg";
+import datacenterExteriorImage from "@/assets/datacenter-exterior.jpg";
+import infrastructureImage from "@/assets/infrastructure-night.jpg";
+import teamBriefingImage from "@/assets/team-briefing.jpg";
 
 const services = [
   {

@@ -60,11 +60,6 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* Image Break */}
-      <section className="relative h-64 md:h-80 overflow-hidden border-y border-border">
-        <img src={accessControlImage} alt="Security access control" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-background/40" />
-      </section>
 
       {/* Benefits & Requirements */}
       <section className="py-24 bg-card border-b border-border">

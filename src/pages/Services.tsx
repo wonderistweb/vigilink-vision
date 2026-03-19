@@ -125,8 +125,8 @@ const Services = () => {
       </section>
 
       {/* Services */}
-      <section className="py-24">
-        <div className="container mx-auto px-4 space-y-28">
+      <section className="py-24 digital-texture overflow-hidden relative">
+        <div className="container mx-auto px-4 space-y-28 relative z-10">
           {services.map((service, index) => (
             <div key={service.title} className="space-y-8">
               {/* Image */}

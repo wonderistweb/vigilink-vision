@@ -170,9 +170,9 @@ const Services = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-card border-y border-border text-center">
-        <div className="container mx-auto px-4">
-          <BrandEmblem className="w-14 h-14 text-primary/25 mx-auto mb-6" />
+      <section className="py-24 bg-card border-y border-border text-center relative overflow-hidden">
+        <BrandEmblem className="absolute left-[-5%] top-1/2 -translate-y-1/2 w-[450px] h-[450px] md:w-[600px] md:h-[600px] text-primary/[0.03] pointer-events-none" />
+        <div className="container mx-auto px-4 relative z-10">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             Need a Custom Security Solution?
           </h2>

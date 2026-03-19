@@ -207,8 +207,8 @@ const Index = () => {
           <img src={datacenterCorridorImage} alt="Data center infrastructure" className="w-full h-full object-cover opacity-15" />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
         </div>
+        <BrandEmblem className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] text-primary/[0.04] pointer-events-none" />
         <div className="container mx-auto px-4 text-center relative z-10">
-          <BrandEmblem className="w-16 h-16 text-primary/20 mx-auto mb-6" />
           <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6">
             Ready to Secure Your Infrastructure?
           </h2>

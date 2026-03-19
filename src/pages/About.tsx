@@ -66,7 +66,7 @@ const About = () => {
 
       {/* Values */}
       <section className="py-24 relative overflow-hidden">
-        <BrandEmblem className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] text-primary/[0.04] pointer-events-none" />
+        <BrandEmblem className="absolute right-[-10%] top-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[700px] md:h-[700px] text-white opacity-[0.02] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <div className="flex items-center gap-2 justify-center mb-4">

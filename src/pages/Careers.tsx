@@ -64,7 +64,7 @@ const Careers = () => {
 
       {/* Benefits & Requirements */}
       <section className="py-24 bg-card border-b border-border relative overflow-hidden">
-        <BrandEmblem className="absolute right-[-8%] bottom-[-15%] w-[500px] h-[500px] md:w-[650px] md:h-[650px] text-primary/[0.04] pointer-events-none" />
+        <BrandEmblem className="absolute right-[-8%] bottom-[-15%] w-[500px] h-[500px] md:w-[650px] md:h-[650px] text-white opacity-[0.02] pointer-events-none" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>

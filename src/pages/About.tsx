@@ -92,8 +92,8 @@ const About = () => {
       </section>
 
       {/* Leadership */}
-      <section className="py-24 bg-card border-y border-border">
-        <div className="container mx-auto px-4">
+      <section className="py-24 bg-card border-y border-border digital-texture overflow-hidden relative">
+        <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="flex items-center gap-2 mb-4">

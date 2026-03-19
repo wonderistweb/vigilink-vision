@@ -94,8 +94,8 @@ const Careers = () => {
       </section>
 
       {/* Application Form */}
-      <section className="py-24">
-        <div className="container mx-auto px-4 max-w-2xl">
+      <section className="py-24 digital-texture overflow-hidden relative">
+        <div className="container mx-auto px-4 max-w-2xl relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-display font-bold text-foreground mb-4">Apply Now</h2>
             <p className="text-muted-foreground">
